@@ -82,12 +82,12 @@ After the data is inserted, various SQL queries can be written to explore and an
 			SUM(comments) as total_comments
 		FROM spotify
 		WHERE licensed = 'true'
-    	```
+    ```
 4. **Find all tracks that belong to the album type `single`.**
    	```SQL
     		SELECT * FROM spotify
 		WHERE album_type ILIKE 'single'
-    	```
+    ```
 5. **Count the total number of tracks by each artist.**
    	```SQL
     		SELECT 
@@ -96,7 +96,7 @@ After the data is inserted, various SQL queries can be written to explore and an
 		FROM spotify
 		GROUP BY artist
 		ORDER BY 2
-    	```
+    ```
 
 ### Medium Level
 1. **Calculate the average danceability of tracks in each album.**
