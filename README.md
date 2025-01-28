@@ -155,11 +155,11 @@ After the data is inserted, various SQL queries can be written to explore and an
 			streamed_on_spotify > streamed_on_youtube
 			AND
 			streamed_on_youtube <> 0
- 	```
+```
 
 ### Advanced Level
 1. **Find the top 3 most-viewed tracks for each artist using window functions.**
-   	```SQL
+   ```SQL
     		WITH ranking_artist
 		AS
 		(SELECT 
@@ -175,16 +175,16 @@ After the data is inserted, various SQL queries can be written to explore and an
 		WHERE rank <= 3
     	```
 2. **Write a query to find tracks where the liveness score is above the average.**
-	```SQL
+```SQL
  		SELECT 
 			track,
 			artist,
 			liveness
 		FROM spotify
 		WHERE liveness > (SELECT AVG(liveness) FROM spotify)
- 	```	
+```	
 3. **Use a `WITH` clause to calculate the difference between the highest and lowest energy values for tracks in each album.**
-	```SQL
+```SQL
 		WITH cte
 		AS
 		(SELECT 
@@ -199,23 +199,23 @@ After the data is inserted, various SQL queries can be written to explore and an
 			highest_energy - lowest_energery as energy_diff
 		FROM cte
 		ORDER BY 2 DESC
-	```
+```
 4. **Find tracks where the energy-to-liveness ratio is greater than 1.2.**
-	```SQL
+```SQL
  		SELECT 
 			track,
 			energy/liveness AS energy_to_liveness_ratio
 		FROM spotify
 		WHERE energy/liveness > 1.2
- 	```
+```
 5. **Calculate the cumulative sum of likes for tracks ordered by the number of views, using window functions.**
-	```SQL
+```SQL
  		SELECT 
 			track,
 			SUM(likes) OVER(ORDER BY views) AS cumulative_sum
 		FROM spotify
 		ORDER BY 2 DESC
- 	```
+```
 
 ---
 
