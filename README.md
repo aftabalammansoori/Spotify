@@ -107,7 +107,7 @@ After the data is inserted, various SQL queries can be written to explore and an
 		FROM spotify
 		GROUP BY 1
 		ORDER BY 2
-    	```
+	```
 2. **Find the top 5 tracks with the highest energy values.**
    	```SQL
     		SELECT 
@@ -117,9 +117,9 @@ After the data is inserted, various SQL queries can be written to explore and an
 		GROUP BY 1
 		ORDER BY 2 DESC
 		LIMIT 5
-    	```
+	```
 3. **List all tracks along with their views and likes where `official_video = TRUE`.**
-   	```SQL
+   ```SQL
     		SELECT 
 			track,
 			SUM(views) as total_views,
@@ -128,9 +128,10 @@ After the data is inserted, various SQL queries can be written to explore and an
 		WHERE official_video = 'true'
 		GROUP BY 1
 		ORDER BY 2
-    	```
+	```
+
 4. **For each album, calculate the total views of all associated tracks.**
-	```SQL
+```SQL
  		SELECT 
 			album,
 			track,
@@ -138,9 +139,10 @@ After the data is inserted, various SQL queries can be written to explore and an
 		FROM spotify
 		GROUP BY 1, 2
 		ORDER BY 3
- 	```
+```
+ 
 5. **Retrieve the track names that have been streamed on Spotify more than YouTube.**
-	```SQL
+```SQL
  		SELECT * FROM
 		(SELECT 
 	 		track,
