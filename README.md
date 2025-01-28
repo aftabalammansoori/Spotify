@@ -75,7 +75,7 @@ After the data is inserted, various SQL queries can be written to explore and an
 			DISTINCT album, artist
 		FROM spotify
 		ORDER BY 1
-    	```
+    ```
 3. **Get the total number of comments for tracks where `licensed = TRUE`.**
    	```SQL
     		SELECT 
