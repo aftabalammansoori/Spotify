@@ -173,7 +173,7 @@ After the data is inserted, various SQL queries can be written to explore and an
 		)
 		SELECT * FROM ranking_artist
 		WHERE rank <= 3
-    	```
+		```
 2. **Write a query to find tracks where the liveness score is above the average.**
 ```SQL
  		SELECT 
