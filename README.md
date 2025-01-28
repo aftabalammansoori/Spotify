@@ -159,7 +159,7 @@ After the data is inserted, various SQL queries can be written to explore and an
 
 ### Advanced Level
 1. **Find the top 3 most-viewed tracks for each artist using window functions.**
-   ```SQL
+  	 ```SQL
     		WITH ranking_artist
 		AS
 		(SELECT 
@@ -173,7 +173,7 @@ After the data is inserted, various SQL queries can be written to explore and an
 		)
 		SELECT * FROM ranking_artist
 		WHERE rank <= 3
-		```
+	```
 2. **Write a query to find tracks where the liveness score is above the average.**
 ```SQL
  		SELECT 
